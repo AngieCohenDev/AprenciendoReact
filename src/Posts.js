@@ -1,8 +1,14 @@
 export const Posts = () => {
   return (
-    <ul>
-      <li>Titulo de una publicacion</li>
-      <li>Titulo de una publicacion 2</li>
-    </ul>
+    <button
+      onClick={() => {
+        fetch("https://jsonplaceholder.typicode.pdv/posts")
+          .then((response) => response.json())
+          .then((data) => console.log(data))
+          .catch(error => console.error(error));
+      }}
+    >
+      trear datos
+    </button>
   );
 };
